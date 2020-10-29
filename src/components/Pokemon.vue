@@ -47,14 +47,47 @@
 
         
       </div>
+      <!-- contenedor imagen -->
       <div class="flex justify-center absolute top-50 left-45">
           <div class="w-48 h-48 flex  ">
             <img :src="`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`" class="h-full w-full">
           </div>      
          </div>
       <!-- contenedor inforabajo -->
-      <div class="w-screen rounded-t-3xl  h-11/20 bg-white ">
+      <div class="w-screen rounded-t-3xl  h-11/20 bg-white justify-around ">
+         <div class="flex flex-row mt-6 justify-around">
+           <button @click="tab = 'about'">About</button>
+           <button @click="tab = 'base'"> Base Stats</button>
+           <button enable=false>Evolution</button>
+           <button enable=false>Moves</button>
+         </div>
          
+         <div v-if="tab == 'about'" class="flex flex-col justify-around">
+              <!-- informacion -->
+              <div class="flex flex-col m-4 space-y-4">
+                <!-- datos -->
+                
+                  <div class="flex items-center space-x-12"><span class="text-gray-600">Species</span><span>{{pokemon.stats[5].stat.name}}</span></div>
+                  <div class="flex items-center space-x-14"><span class="text-gray-600">Heigth</span><span>{{pokemon.height}}</span></div>
+                  <div class="flex items-center space-x-14"><span class="text-gray-600">Weight</span><span>{{pokemon.weight}}</span></div>
+                  <div class="flex items-center space-x-12"><span class="text-gray-600">Abilities</span><span >{{pokemon.abilities[0].ability.name}}, {{pokemon.abilities[1].ability.name}} </span></div>
+                
+               
+              </div>
+              <!-- breding -->
+              <span class="ml-4 font-bold">BREADING</span>
+              <!-- informacion -->
+              <div class="flex flex-col m-4 space-y-4">
+                <!-- datos -->
+                
+                  <div class="flex items-center space-x-16"><span class="text-gray-600">Gender</span><span>{{pokemon.stats[5].stat.name}}</span></div>
+                  <div class="flex items-center space-x-10"><span class="text-gray-600">Egg Groups</span><span>{{pokemon.height}}</span></div>
+                  <div class="flex items-center space-x-12"><span class="text-gray-600">Egg cycle</span><span>{{pokemon.weight}}</span></div>
+              </div>
+            </div>
+            <div v-if="tab == 'base'">
+              base
+         </div>   
       </div>
   </div>
   </div>
