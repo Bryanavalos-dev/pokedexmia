@@ -1,0 +1,9 @@
+:root {
+    brown-400: '#3c2d2d';
+    brown-200: '#5a4e4c';
+    /* ... */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
