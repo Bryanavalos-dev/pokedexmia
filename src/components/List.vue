@@ -3,7 +3,7 @@
     <span class="font-bold text-xl md:text-2xl xl:text-3xl uppercase hover:text-green-700">Pokedex</span>
     <div class="grid grid-cols-2  celular:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 md:grid-cols-3 xl:grid-cols-4 gap-3">
       <!-- Card -->
-      <router-link v-for="(p, i) of pokemons" :key="i" :to="`pokemons/${p.name}/${p.color}`" tag="div" class="flex flex-col col-span-1 rounded-2xl p-4 border-2 border-gray-600 hover:shadow-lg hover:-mt-2 cursor-pointer" :class="`bg-${p.color}-500`">
+      <router-link v-for="(p, i) of pokemons" :key="i" :to="`pokemons/${p.name}/${p.color}`" tag="div" class="flex flex-col col-span-1 rounded-2xl p-4 border-2 border-gray-600 hover:shadow-lg hover:-mt-2 cursor-pointer" :class="`bg-${p.color}-400`">
         <span>{{ p.name }}</span>
         <div class="flex flex-row">
           <div class="w-1/2 flex flex-col justify-center space-y-2">
