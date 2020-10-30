@@ -27,7 +27,7 @@ module.exports = {
             colors: {
                 brown: {
                     400: '#3c2d2d',
-                    200: '#5a4e4c'
+                    300: '#5a4e4c'
                 }
             },
             spacing: {

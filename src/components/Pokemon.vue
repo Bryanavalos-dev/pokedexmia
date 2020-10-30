@@ -27,14 +27,14 @@
         </div>
 
         <!-- contenedornombrepoderes       -->
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row text-white justify-between">
           <!-- contenedornombreypoderes -->
           <div class="flex flex-col ">
             <div class="flex ">
-              <span v-if="pokemons" class="text-white font-bold text-2xl">{{ pokemons.name }}</span>
+              <span v-if="pokemons" class=" font-bold text-2xl">{{ pokemons.name }}</span>
             </div>
             <div class="w-full flex items-center ">
-              <span v-for="(t, j) of pokemons.types" :key="j" class=" rounded-full w-full px-2 mr-2 " :class="`bg-${$route.params.color}-200`" >{{pokemons.types[j].type.name}}</span>
+              <span v-for="(t, j) of pokemons.types" :key="j" class=" rounded-full w-full px-2 mr-2 font-bold " :class="`bg-${$route.params.color}-300`" >{{pokemons.types[j].type.name}}</span>
             </div>
           </div>
           <!-- contenedorid -->
